@@ -1,7 +1,17 @@
-### Discord Profile Generator
+<div align="center">
+
+# Discord Profile Generator
 
 This project is a Discord profile generator hosted on GitHub Pages. 
 It enables users to create random Discord profiles with unique usernames, about me sections, nicknames, pronouns, and profile images with up to **100 quadrillion** unique profiles.
+
+</div>
+
+<div align="center">
+
+## ☕ [Support my work on Ko-Fi](https://ko-fi.com/thatsinewave)
+
+</div>
 
 ### How to Use
 
