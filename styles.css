@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #1a1a1a;
+  background-color: #1e1f22;
   color: #fff;
   text-align: center;
   margin: 0;
@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background-color: #2c2c2c;
+  background-color: #2a2c2f;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: sticky;
@@ -33,7 +33,7 @@ header {
 }
 
 .btn-header {
-  background-color: #4caf50;
+  background-color: #950101;
   color: #fff;
   display: flex;
   align-items: center;
@@ -47,7 +47,7 @@ header {
 }
 
 .btn-header:hover {
-  background-color: #388e3c;
+  background-color: #620000;
 }
 
 .container {
@@ -57,10 +57,8 @@ header {
   flex-grow: 1;
 }
 
-.profile-card,
-.license-card,
-.info-card {
-  background-color: #2c2c2c;
+.profile-card {
+  background-color: #2a2c2f;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -68,15 +66,47 @@ header {
   align-items: flex-start;
 }
 
-.profile-info,
-.license-info,
+.license-card {
+  background-color: #2a2c2f;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: flex-start;
+}
+
+.info-card {
+  background-color: #2a2c2f;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: flex-start;
+}
+
+.profile-info {
+  flex-grow: 1;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.license-info {
+  flex-grow: 1;
+  text-align: left;
+  padding-left: 20px;
+}
+
 .info-info {
   flex-grow: 1;
   text-align: left;
   padding-left: 20px;
 }
 
-.license-card .license-info,
+.license-card .license-info {
+  text-align: center;
+  padding-left: 0px;
+}
+
 .info-card .info-info {
   text-align: center;
   padding-left: 0px;
@@ -91,7 +121,7 @@ header {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #fff;
+  border: 5px solid #950101;
 }
 
 .button-group {
@@ -119,30 +149,30 @@ header {
 }
 
 .btn-primary {
-  background-color: #4caf50;
+  background-color: #950101;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background-color: #388e3c;
+  background-color: #620000;
 }
 
 .btn-secondary {
-  background-color: #2196f3;
+  background-color: #950101;
   color: #fff;
 }
 
 .btn-secondary:hover {
-  background-color: #1976d2;
+  background-color: #620000;
 }
 
 .btn-secondary:disabled {
-  background-color: #757575;
+  background-color: #080000;
   cursor: not-allowed;
 }
 
 footer {
-  background-color: #2c2c2c;
+  background-color: #2a2c2f;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: sticky;
@@ -152,7 +182,7 @@ footer {
 /* Media Queries */
 @media only screen and (max-width: 600px) {
   .btn-header {
-    background-color: #4caf50;
+    background-color: #950101;
     color: #fff;
     display: inline-flex;
     align-items: center;
@@ -165,6 +195,10 @@ footer {
     text-decoration: none;
     width: auto;
   }
+
+  .btn-header:hover {
+    background-color: #620000;
+  }
   .header-content {
     display: flex;
     flex-direction: column;
@@ -176,11 +210,13 @@ footer {
     flex-wrap: wrap;
     gap: 10px;
   }
+
   .header-buttons {
     justify-content: center;
   }
+
   .profile-card {
-    background-color: #2c2c2c;
+    background-color: #2a2c2f;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -190,8 +226,9 @@ footer {
     max-width: 100%;
     overflow: hidden;
   }
+
   .license-card {
-    background-color: #2c2c2c;
+    background-color: #2a2c2f;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -201,8 +238,9 @@ footer {
     max-width: 100%;
     overflow: hidden;
   }
+
   .info-card {
-    background-color: #2c2c2c;
+    background-color: #2a2c2f;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -212,6 +250,7 @@ footer {
     max-width: 100%;
     overflow: hidden;
   }
+
   .profile-info,{
     flex-grow: 1;
     text-align: center;
@@ -219,6 +258,7 @@ footer {
     max-width: 100%;
     overflow: hidden;
   }
+
   .license-info {
     flex-grow: 1;
     text-align: center;
@@ -226,6 +266,7 @@ footer {
     max-width: 100%;
     overflow: hidden;
   }
+
   .info-info {
     flex-grow: 1;
     text-align: center;
@@ -233,9 +274,11 @@ footer {
     max-width: 100%;
     overflow: hidden;
   }
+
   header {
     position: static;
   }
+
   footer {
     position: static;
   }
