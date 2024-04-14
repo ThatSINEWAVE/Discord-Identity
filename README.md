@@ -5,7 +5,7 @@
 This project is a Discord profile identity generator hosted on GitHub Pages. 
 It enables users to create random Discord profiles with unique usernames, about me sections, nicknames, pronouns, and profile images with up to **100 quadrillion** unique profiles.
 
-![otter](https://github.com/ThatSINEWAVE/Discord-Identity/assets/133239148/ac9533a1-11d5-481a-a717-19d607c3927a)
+![otter](https://github.com/ThatSINEWAVE/Discord-Identity/assets/133239148/e9837858-716f-4eaf-ab14-99ffe18a27b9)
 
 </div>
 
