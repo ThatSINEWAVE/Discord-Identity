@@ -57,7 +57,9 @@ header {
   flex-grow: 1;
 }
 
-.profile-card {
+.profile-card,
+.license-card,
+.info-card {
   background-color: #2c2c2c;
   padding: 20px;
   border-radius: 5px;
@@ -66,38 +68,16 @@ header {
   align-items: flex-start;
 }
 
-.profile-info {
+.profile-info,
+.license-info,
+.info-info {
   flex-grow: 1;
   text-align: left;
   padding-left: 20px;
 }
 
-.license-card {
-  background-color: #2c2c2c;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-}
-
-.license-info {
-  flex-grow: 1;
-  text-align: center;
-  padding-left: 0px;
-}
-
-.info-card {
-  background-color: #2c2c2c;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-}
-
-.info-info {
-  flex-grow: 1;
+.license-card .license-info,
+.info-card .info-info {
   text-align: center;
   padding-left: 0px;
 }
@@ -167,4 +147,64 @@ footer {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: sticky;
   bottom: 0;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .btn-header {
+    background-color: #4caf50;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    width: auto;
+  }
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .header-buttons {
+    justify-content: center;
+  }
+  .profile-card,
+  .license-card,
+  .info-card {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .profile-info,
+  .license-info,
+  .info-info {
+    flex-grow: 1;
+    text-align: center;
+    padding-left: 0px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  header {
+    position: static;
+  }
+  footer {
+    position: static;
+  }
 }
