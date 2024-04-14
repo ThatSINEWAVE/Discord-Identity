@@ -7,30 +7,39 @@ It enables users to create random Discord profiles with unique usernames, about 
 
 </div>
 
+## How to Use
+
+1. Visit the [GitHub Pages link](https://thatsinewave.github.io/Discord-Identity/).
+2. Click the "Generate Profile" button to create a random Discord profile.
+3. View the generated profile, including the profile image, username, about me section, nickname, and pronouns.
+4. Optionally, download the generated profile using the "Download Profile" button (Note: downloading functionality is not yet implemented in the current version).
+
 <div align="center">
 
 ## ☕ [Support my work on Ko-Fi](https://ko-fi.com/thatsinewave)
 
 </div>
 
-### How to Use
-
-1. Visit the GitHub Pages link provided.
-2. Click the "Generate Profile" button to create a random Discord profile.
-3. View the generated profile, including the profile image, username, about me section, nickname, and pronouns.
-4. Optionally, download the generated profile using the "Download Profile" button
-(Note: downloading functionality is not yet implemented in the current version).
-
-### Features
+## Features
 
 - Randomly generates Discord profiles using predefined data sets.
 - Provides a visually appealing interface for displaying generated profiles.
+- Up to 100 quadrillion unique profiles.
 - Otter.
 
-### Support and Feedback
+## Data
 
-If you have any suggestions, feedback, or issues with the project, feel free to reach me out via GitHub or through discord at **sinewave_**.
+- `about_me.json`: Contains 10,000 different "about me" sections.
+- `nicknames.json`: Contains 10,000 different nicknames.
+- `pronouns.json`: Contains 1,000 different pronouns.
+- `usernames.json`: Contains 10,000 different usernames.
+- `images.json`: Contains the names of all 1,000 profile images.
+- `images/`: Contains 1,000 profile images.
 
-### License
+## Contributing
 
-The Discord Profile Generator is licensed under the MIT License.
+Contributions to this project are welcome! Feel free to open issues for bugs or feature requests, or submit pull requests with improvements to the codebase.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
