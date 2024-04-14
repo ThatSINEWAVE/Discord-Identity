@@ -14,7 +14,7 @@ It enables users to create random Discord profiles with unique usernames, about 
 1. Visit the [GitHub Pages link](https://thatsinewave.github.io/Discord-Identity/).
 2. Click the "Generate Profile" button to create a random Discord profile.
 3. View the generated profile, including the profile image, username, about me section, nickname, and pronouns.
-4. Optionally, download the generated profile using the "Download Profile" button (Note: downloading functionality is not yet implemented in the current version).
+4. Optionally, download the generated profile using the "Download Profile" button.
 
 <div align="center">
 
