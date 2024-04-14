@@ -65,11 +65,43 @@ function generateProfile() {
   downloadBtn.disabled = false;
 }
 
+function downloadProfile() {
+  // Create a new ZIP archive
+  const zip = new JSZip();
+
+  // Add profile picture to the archive
+  const profileImageUrl = profileImage.src;
+  const profileImageFileName = profileImageUrl.substring(profileImageUrl.lastIndexOf('/') + 1);
+
+  // Fetch the profile image as a blob
+  fetch(profileImageUrl)
+    .then(response => response.blob())
+    .then(blob => {
+      // Add the profile image to the ZIP archive
+      zip.file(profileImageFileName, blob);
+
+      // Create a details.txt file with profile information
+      const profileDetails = "Username: " + username.textContent + "\n" +
+                             "Nickname: " + nickname.textContent + "\n" +
+                             "Pronouns: " + pronouns.textContent + "\n" +
+                             "About Me: " + aboutMe.textContent + "\n" +
+                             "Primary Color: " + document.getElementById('primary-color-text').textContent + "\n" +
+                             "Accent Color: " + document.getElementById('accent-color-text').textContent;
+      zip.file('details.txt', profileDetails);
+
+      // Generate the ZIP file
+      zip.generateAsync({ type: "blob" })
+        .then(zipBlob => {
+          // Trigger download
+          saveAs(zipBlob, "profile.zip");
+        })
+        .catch(error => console.error('Error generating ZIP archive:', error));
+    })
+    .catch(error => console.error('Error downloading profile picture:', error));
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener('click', generateProfile);
 
 // Add event listener to download button
-downloadBtn.addEventListener('click', () => {
-  // Implement download functionality here
-  console.log('Download profile');
-});
+downloadBtn.addEventListener('click', downloadProfile);
