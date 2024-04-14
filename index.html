@@ -1,7 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="container">
+    <h1>Profile Generator</h1>
+    <div class="profile-card">
+      <img id="profile-image" src="" alt="Profile Image">
+      <h2 id="username"></h2>
+      <p id="about-me"></p>
+      <p>Nickname: <span id="nickname"></span></p>
+      <p>Pronouns: <span id="pronouns"></span></p>
+    </div>
+    <button id="generate-btn">Generate Profile</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
