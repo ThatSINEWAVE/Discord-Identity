@@ -179,8 +179,28 @@ footer {
   .header-buttons {
     justify-content: center;
   }
-  .profile-card,
-  .license-card,
+  .profile-card {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .license-card {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    overflow: hidden;
+  }
   .info-card {
     background-color: #2c2c2c;
     padding: 20px;
@@ -192,8 +212,20 @@ footer {
     max-width: 100%;
     overflow: hidden;
   }
-  .profile-info,
-  .license-info,
+  .profile-info,{
+    flex-grow: 1;
+    text-align: center;
+    padding-left: 0px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .license-info {
+    flex-grow: 1;
+    text-align: center;
+    padding-left: 0px;
+    max-width: 100%;
+    overflow: hidden;
+  }
   .info-info {
     flex-grow: 1;
     text-align: center;
