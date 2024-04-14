@@ -3,21 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Generator</title>
+  <title>Profile Generator by SINEWAVE_</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Profile Generator</h1>
-    <div class="profile-card">
-      <img id="profile-image" src="" alt="Profile Image">
-      <h2 id="username"></h2>
-      <p id="about-me"></p>
-      <p>Nickname: <span id="nickname"></span></p>
-      <p>Pronouns: <span id="pronouns"></span></p>
+  <header>
+    <div class="header-content">
+      <h1>Profile Generator by SINEWAVE_</h1>
+      <div class="header-buttons">
+        <a href="https://github.com/your-github-repo" target="_blank" class="btn btn-header">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="#" target="_blank" class="btn btn-header">
+          <i class="fas fa-heart"></i> Support Me
+        </a>
+        <button class="btn btn-header">Placeholder 2</button>
+      </div>
     </div>
-    <button id="generate-btn">Generate Profile</button>
+  </header>
+  <div class="container">
+    <div class="profile-card">
+      <img id="profile-image" src="data/images/placeholder.png" alt="Profile Image">
+      <div class="profile-info">
+        <h2>Username: <span id="username">Otter</span></h2>
+        <hr>
+        <p>About me: <span id="about-me">Click "Generate Profile" to start</span></p>
+        <p>Nickname: <span id="nickname">Giga Chad Otter</span></p>
+        <p>Pronouns: <span id="pronouns">Otter / Otter</span></p>
+      </div>
+    </div>
+    <div class="button-group">
+      <button id="generate-btn" class="btn btn-primary">Generate Profile</button>
+      <button id="download-btn" class="btn btn-secondary" disabled>Download Profile</button>
+    </div>
   </div>
+  <footer>
+    <p>&copy; SINEWAVE_</p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

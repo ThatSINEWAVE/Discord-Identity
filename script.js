@@ -5,6 +5,7 @@ const aboutMe = document.getElementById('about-me');
 const nickname = document.getElementById('nickname');
 const pronouns = document.getElementById('pronouns');
 const generateBtn = document.getElementById('generate-btn');
+const downloadBtn = document.getElementById('download-btn');
 
 // Load data from JSON files
 let aboutMeData, nicknamesData, pronounsData, usernamesData, imageFiles;
@@ -14,16 +15,14 @@ Promise.all([
   fetch('data/nicknames.json').then(response => response.json()),
   fetch('data/pronouns.json').then(response => response.json()),
   fetch('data/usernames.json').then(response => response.json()),
-  fetch('data/images/')
-    .then(response => response.text())
-    .then(data => data.trim().split('\n').filter(Boolean))
+  fetch('data/images.json').then(response => response.json())
 ])
 .then(([about, nicknames, pronouns, usernames, images]) => {
   aboutMeData = about;
   nicknamesData = nicknames;
   pronounsData = pronouns;
   usernamesData = usernames;
-  imageFiles = images.map(file => `data/images/${file}`);
+  imageFiles = images;
 })
 .catch(error => console.error('Error loading data:', error));
 
@@ -45,12 +44,21 @@ function generateProfile() {
   const randomAboutMe = aboutMeData[randomProperty][Math.floor(Math.random() * aboutMeData[randomProperty].length)];
 
   // Update DOM elements
-  profileImage.src = randomImageFile;
+  profileImage.src = `data/images/${randomImageFile}`;
   username.textContent = randomUsername;
+  aboutMe.textContent = randomAboutMe;
   nickname.textContent = randomNickname;
   pronouns.textContent = randomPronouns;
-  aboutMe.textContent = randomAboutMe;
+
+  // Enable download button
+  downloadBtn.disabled = false;
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', generateProfile);
+
+// Add event listener to download button
+downloadBtn.addEventListener('click', () => {
+  // Implement download functionality here
+  console.log('Download profile');
+});
