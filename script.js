@@ -43,12 +43,23 @@ function generateProfile() {
   const randomProperty = aboutMeProperties[Math.floor(Math.random() * aboutMeProperties.length)];
   const randomAboutMe = aboutMeData[randomProperty][Math.floor(Math.random() * aboutMeData[randomProperty].length)];
 
+  // Generate random primary and accent colors
+  const randomPrimaryColor = "#" + Math.floor(Math.random()*16777215).toString(16); // Generate hex color code
+  const randomAccentColor = "#" + Math.floor(Math.random()*16777215).toString(16); // Generate hex color code
+
   // Update DOM elements
   profileImage.src = `data/images/${randomImageFile}`;
   username.textContent = randomUsername;
   aboutMe.textContent = randomAboutMe;
   nickname.textContent = randomNickname;
   pronouns.textContent = randomPronouns;
+
+  // Update primary and accent color boxes and their respective hex codes
+  document.getElementById('primary-color-box').style.backgroundColor = randomPrimaryColor;
+  document.getElementById('primary-color-text').textContent = randomPrimaryColor;
+
+  document.getElementById('accent-color-box').style.backgroundColor = randomAccentColor;
+  document.getElementById('accent-color-text').textContent = randomAccentColor;
 
   // Enable download button
   downloadBtn.disabled = false;
