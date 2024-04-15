@@ -27,6 +27,7 @@ It enables users to create random Discord profiles with unique usernames, about 
 - Randomly generates Discord profiles using predefined data sets.
 - Provides a visually appealing interface for displaying generated profiles.
 - Up to 100 quadrillion unique profiles.
+- Tracks the number of profiles generated and downloaded during the current session.
 - Otter.
 
 ## Data
@@ -36,7 +37,10 @@ It enables users to create random Discord profiles with unique usernames, about 
 - `pronouns.json`: Contains 1,000 different pronouns.
 - `usernames.json`: Contains 10,000 different usernames.
 - `images.json`: Contains the names of all 1,000 profile images.
+- `banners.json`: Contains the names of all 1,000 banner images. (will be added in the future)
 - `images/`: Contains 1,000 profile images.
+- `banners/`: Contains 1,000 banner images. (will be added in the future)
+- `site-data/`: Contains files and images for the site itself.
 
 ## Contributing
 
@@ -45,3 +49,7 @@ Contributions to this project are welcome! Feel free to open issues for bugs or 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Note
+The "Your generator stats" counters use localStorage that the stores data on the client-side (user's browser), so the counts will be specific to each user's browser session.
+
