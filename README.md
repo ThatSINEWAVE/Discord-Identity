@@ -42,6 +42,11 @@ It enables users to create random Discord profiles with unique usernames, about 
 - `banners/`: Contains 1,000 banner images. (will be added in the future)
 - `site-data/`: Contains files and images for the site itself.
 
+## Credits
+
+- [usernames.txt](https://github.com/jeanphorn/wordlist/blob/master/usernames.txt) - used to generate usernames and nicknames.
+- [pfps.gg](https://pfps.gg/) - source of all profile images and banner images.
+
 ## Contributing
 
 Contributions to this project are welcome! Feel free to open issues for bugs or feature requests, or submit pull requests with improvements to the codebase.
