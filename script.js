@@ -10,6 +10,10 @@ const downloadBtn = document.getElementById('download-btn');
 // Load data from JSON files
 let aboutMeData, nicknamesData, pronounsData, usernamesData, imageFiles;
 
+// Variables to keep track of generated and downloaded profiles
+let generatedProfilesCount = 0;
+let downloadedProfilesCount = 0;
+
 Promise.all([
         fetch('data/about_me.json').then(response => response.json()),
         fetch('data/nicknames.json').then(response => response.json()),
@@ -63,6 +67,11 @@ function generateProfile() {
 
     // Enable download button
     downloadBtn.disabled = false;
+
+    // Increment the generated profiles count
+    generatedProfilesCount++;
+    localStorage.setItem('generatedProfiles', generatedProfilesCount);
+    updateProfileCounts();
 }
 
 function downloadProfile() {
@@ -100,6 +109,11 @@ function downloadProfile() {
                 .catch(error => console.error('Error generating ZIP archive:', error));
         })
         .catch(error => console.error('Error downloading profile picture:', error));
+
+    // Increment the downloaded profiles count
+    downloadedProfilesCount++;
+    localStorage.setItem('downloadedProfiles', downloadedProfilesCount);
+    updateProfileCounts();
 }
 
 // Add event listener to generate button
@@ -107,3 +121,19 @@ generateBtn.addEventListener('click', generateProfile);
 
 // Add event listener to download button
 downloadBtn.addEventListener('click', downloadProfile);
+
+// Function to update the profile counts
+function updateProfileCounts() {
+    document.getElementById('generated-count').textContent = generatedProfilesCount;
+    document.getElementById('downloaded-count').textContent = downloadedProfilesCount;
+}
+
+// Function to initialize the counts from localStorage
+function initializeCounts() {
+    generatedProfilesCount = localStorage.getItem('generatedProfiles') || 0;
+    downloadedProfilesCount = localStorage.getItem('downloadedProfiles') || 0;
+    updateProfileCounts();
+}
+
+// Call initializeCounts when the page loads
+window.addEventListener('load', initializeCounts);
