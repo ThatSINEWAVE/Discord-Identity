@@ -30,6 +30,12 @@ It enables users to create random Discord profiles with unique usernames, about 
 - Tracks the number of profiles generated and downloaded during the current session.
 - Otter.
 
+<div align="center">
+
+# [Join my discord server](https://discord.gg/2nHHHBWNDw)
+
+</div>
+
 ## Data
 
 - `about_me.json`: Contains 10,000 different "about me" sections.
