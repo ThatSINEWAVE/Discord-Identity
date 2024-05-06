@@ -2,7 +2,7 @@
   "name": "Profile Generator by SINEWAVE_",
   "description": "Web application that helps you generate profiles for Discord",
   "short_name": "Profile Generator",
-  "start_url": "/",
+  "start_url": "/Discord-Identity",
   "orientation": "portrait",
   "lang": "en-US",
   "icons": [
