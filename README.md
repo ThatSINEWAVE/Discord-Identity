@@ -32,7 +32,7 @@ It enables users to create random Discord profiles with unique usernames, about 
 
 <div align="center">
 
-# [Join my discord server](https://discord.gg/2nHHHBWNDw)
+# [Join my discord server](https://thatsinewave.github.io/Discord-Redirect/)
 
 </div>
 
